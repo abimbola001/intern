@@ -2,3 +2,10 @@ for  the  bash script  to work.  the below requirements needs  to be installed.
 Go 1.17 or newer installed.
 Docker installed.
 Administrative access to the system.
+
+#The  command  to  create the  docker image 
+sudo docker build -t aokusada/hello-express:latest .
+
+#the  command  to push  to dockerhub
+sudo docker push aokusada/hello-express:latest
+
