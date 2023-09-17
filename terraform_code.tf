@@ -36,7 +36,7 @@ resource "kubernetes_deployment" "Nodeappdeployment" {
   }
 
   spec {
-    replicas = 1
+    replicas = 2
     selector {
       match_labels = {
         app = "nodejs"
