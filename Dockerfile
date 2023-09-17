@@ -1,20 +1,12 @@
-# Use an official Node.js runtime as a parent image
+## it uses node js image alpine version from image registries.
 FROM node:14
-
-# Set the working directory in the container
+## it sets directory in the container to /app to store files and launch our app.
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
-
-# Install application dependencies
+## it copies the app to /app directory with dependencies.
+COPY package.json /app
 RUN npm install
-
-# Copy the rest of the application code to the working directory
-COPY . .
-
-# Expose the port that the application will run on
-EXPOSE 3000
-
-# Define the command to run your application
-CMD ["node", "app.js"]
+COPY . /app
+## it commands to run our app which is index.js.
+CMD node index.js
+##  it exposes the port where our app is running that is port 8080.
+EXPOSE 8080
