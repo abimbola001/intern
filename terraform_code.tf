@@ -59,7 +59,7 @@ resource "kubernetes_deployment" "Nodeappdeployment" {
     }
   }
 
-esource "kubernetes_service" "hello_world1_service" {
+resource "kubernetes_service" "hello_world1_service" {
   depends_on = [kubernetes_deployment.Nodeappdeployment]
 
   metadata {
