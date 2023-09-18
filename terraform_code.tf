@@ -58,3 +58,28 @@ resource "kubernetes_deployment" "Nodeappdeployment" {
       }
     }
   }
+
+esource "kubernetes_service" "hello_world1_service" {
+  depends_on = [kubernetes_deployment.Nodeappdeployment]
+
+  metadata {
+    labels = {
+      app = "hello-world-example1"
+    }
+    name = "hello-world-example1"
+    #namespace = kubernetes_namespace.hello_world_namespace.metadata.0.name
+  }
+
+  spec {
+    port {
+      name = "api1"
+      port = 8080
+      target_port = 8080
+    }
+    selector = {
+      app = "hello-world-example1"
+    }
+    type = "NodePort"
+  }
+}
+
