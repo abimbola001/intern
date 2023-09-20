@@ -17,5 +17,4 @@ sudo kubectl create  secret docker-registry dockerhubpull --docker-username= --d
 
 
 
-https://hub.docker.com/r/aokusada/hello-express/tags
-<img width="1267" alt="Screenshot 2023-09-16 at 10 01 35 AM" src="https://github.com/abimbola001/intern/assets/44692035/f0957ac5-0efc-41e5-962a-c2b59c675222">
+
