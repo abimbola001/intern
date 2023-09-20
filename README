@@ -1,4 +1,4 @@
-for  the  bash script  to work.  the below requirements need  to be installed.
+for  the  bash script "Kind_cluster_deploy.sh"  to work.  The below requirements need  to be installed.
 Go 1.17 or newer installed.
 Docker installed.
 Administrative access to the system.
