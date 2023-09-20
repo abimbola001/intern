@@ -1,13 +1,21 @@
-for  the  bash script  to work.  the below requirements needs  to be installed.
+for  the  bash script  to work.  the below requirements need  to be installed.
 Go 1.17 or newer installed.
 Docker installed.
 Administrative access to the system.
 
+
 #The  command  to  create the  docker image 
-sudo docker build -t aokusada/hello-express1:latest .
+sudo docker build -t aokusada/hello1-express:latest .
 
 #the  command  to push  to dockerhub
-sudo docker push aokusada/hello-express1:latest
+sudo docker push aokusada/hello1-express:latest
+
+##secret registry created in order  to  access dockerhub registry  to pull  the image created using  the  below command.
+
+
+sudo kubectl create  secret docker-registry dockerhubpull --docker-username= --docker-server=docker.io --docker-email=   --docker-password=
+
+
 
 https://hub.docker.com/r/aokusada/hello-express/tags
 <img width="1267" alt="Screenshot 2023-09-16 at 10 01 35 AM" src="https://github.com/abimbola001/intern/assets/44692035/f0957ac5-0efc-41e5-962a-c2b59c675222">
