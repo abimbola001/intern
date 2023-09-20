@@ -1,7 +1,15 @@
-for  the  bash script "Kind_cluster_deploy.sh"  to work.  The below requirements need  to be installed.
-Go 1.17 or newer installed.
-Docker installed.
-Administrative access to the system.
+###for  the  bash script "Kind_cluster_deploy.sh"  to work.  The below requirements need to be installed.
+--- Go 1.17 or newer installed.
+-- Docker installed.
+-- Administrative access to the system.
+-- download pre-compiled binary
+cd /tmp
+curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.12.0/kind-darwin-arm64
+chmod +x ./kind
+sudo mv kind /usr/local/bin/
+
+
+### Creating Image 
 
 
 #The  command  to  create the  docker image 
